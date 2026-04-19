@@ -1,4 +1,5 @@
-public class DigitalVideoDisc {
+package AimsProject.Src.hust.soict.dsai.aims.disc;
+public class DigitalVideoDisc{
 	private String title;
 	private String category;
 	private String director;
@@ -8,8 +9,8 @@ public class DigitalVideoDisc {
 	private int id;
 	public DigitalVideoDisc(String title) {
 	    this.title = title;
-		nbDigitalVideoDiscs++; // Tăng tổng số đĩa lên 1
-        this.id = nbDigitalVideoDiscs; // Gán số thứ tự hiện tại cho id của đĩa này
+		nbDigitalVideoDiscs++; 
+        this.id = nbDigitalVideoDiscs; 
 	}
 	public DigitalVideoDisc(String title, String category, float cost) {
 	    this.title = title;
@@ -30,6 +31,12 @@ public class DigitalVideoDisc {
 	    this.director = director;
 	    this.length = length;
 	    this.cost = cost;
+	}
+	public boolean isMatch(String title) {
+    	return this.title.toLowerCase().contains(title.toLowerCase());
+	}
+	public void setTitle(String title) {
+    	this.title = title;
 	}
 	public int getId() {
         return id;
