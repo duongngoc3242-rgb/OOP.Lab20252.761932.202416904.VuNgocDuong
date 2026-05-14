@@ -1,0 +1,9 @@
+1.
+Lớp Media nên implement interface vì Cart chứa một danh sách các đối tượng kiểu Media. Khi gọi Collections.sort(itemsOrdered), Java cần biết cách so sánh cơ bản giữa hai đối tượng Media bất kỳ (có thể là giữa một cuốn Book và một đĩa DVD)
+2.
+Trong lớp Media, bạn sẽ ghi đè phương thức compareTo(). Thông thường, ta sẽ chọn một tiêu chí "tự nhiên" nhất (như Title) để so sánh trước, sau đó mới đến các tiêu chí phụ.
+3.
+Khong, Interface Comparable chỉ cho phép định nghĩa duy nhất một quy tắc sắp xếp mặc định (gọi là natural ordering) thông qua một phương thức compareTo(). Để có nhiều quy tắc sắp xếp khác nhau (như bài Lab yêu cầu), chúng ta bắt buộc phải sử dụng Comparator
+4.
+B1: Vẫn để lớp Media implement Comparable với quy tắc chung (Title -> Cost)
+B2: Trong lớp DigitalVideoDisc, ghi đè (Override) lại phương thức compareTo()

@@ -1,0 +1,5 @@
+Khi trả về một Interface (không phải kiểu cụ thể): Cho phép thay đổi lớp triển khai bên trong mà không làm hỏng mã nguồn bên ngoài. Nó không thực sự là "getter" vì nó trả về một đối tượng có hành vi, chứ không phải một trường dữ liệu (field) thuần túy
+
+Tại ranh giới với các hệ thống thủ tục (Boundary Layer): Khi code Java phải giao tiếp với các hệ thống không phải hướng đối tượng như Hệ điều hành hoặc Cơ sở dữ liệu (JDBC). Vì các hệ thống này cần sự linh hoạt cao và không biết trước ta sẽ làm gì với dữ liệu, nên việc dùng accessor là khó tránh khỏi.
+
+Dành cho các công cụ tự động (Automated Tools): Giống như Java Beans, các getter/setter tồn tại để các công cụ xây dựng giao diện (UI builders) có thể nhận diện thuộc tính thông qua Introspection API. Người lập trình không nên tự gọi các phương thức này trong code logic.
