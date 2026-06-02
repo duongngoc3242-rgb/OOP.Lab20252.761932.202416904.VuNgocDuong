@@ -1,0 +1,11 @@
+1. Khác biệt về Container cao nhất
+   -AWT: Sử dụng lớp Frame. Các thành phần giao diện được thêm trực tiếp vào Frame.
+   -Swing: Sử dụng lớp JFrame. Các thành phần KHÔNG ĐƯỢC thêm trực tiếp vào JFrame mà phải thêm thông qua một tấm nền gọi là Content Pane
+
+2. Khác biệt về Tên các lớp thành phần:
+   -Các thành phần của Swing hầu hết được cải tiến từ AWT và được phân biệt bằng cách thêm chữ cái 'J' làm tiền tố đứng trước tên lớp của AWT
+   -Ví dụ cụ thể:
+    AWT: Label    -Swing: JLabel
+    AWT: TextField-Swing: JTextField
+    AWT: Frame    -Swing: JFrame
+    AWT: Button   -Swing: JButton
